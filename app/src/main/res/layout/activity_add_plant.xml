@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".AddPlantActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add plant"
+        android:gravity="center"
+        android:textColor="#3d3d3d"
+        android:textSize="30dp"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name(string)"
+        android:id="@+id/etAddPlantName"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="line number(int)"
+        android:inputType="number"
+        android:id="@+id/etAddPlantLineNumber"/>
+
+    <EditText
+        android:id="@+id/etAddPlantIrrigationTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="datetime"
+        android:hint="select Irrigation time(hour- 19:00)" />
+
+    <EditText
+        android:id="@+id/etAddPlantWhenToWater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="when to water(date)" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="water frequency(int)"
+        android:inputType="number"
+        android:id="@+id/etAddPlantWaterFrequency"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="water time(int)"
+        android:inputType="time"
+        android:id="@+id/etAddPlantWaterTime"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Was raining?(0/1/2/3)"
+        android:inputType="number"
+        android:id="@+id/etAddPlantWasRaining"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/add_plant">
+
+        <Button
+            android:id="@+id/btnAddPlantSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="130dp"
+            android:text="Save"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="93dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

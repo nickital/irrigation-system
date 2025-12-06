@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_dialog"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etLineOfPlant"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="240dp"
+        android:gravity="center"
+        android:textColorHint="#cc122b"
+        android:hint="plant line"
+        android:text=""
+        android:inputType="number"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btnDialogStart"
+        android:text="start irrigate"
+        android:layout_marginTop="5dp"
+        />
+</LinearLayout>

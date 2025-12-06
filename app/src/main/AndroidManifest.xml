@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nbb.aaa.flower">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/faucet"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!--good for business but not for me, the application is your home page. you cant even read whatsUp -->
+                <!--<category android:name="android.intent.category.HOME"/>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".StartMyActivityAtBootReceiver"
+            android:label="BroadcastAtBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".AddPlantActivity" />
+        <activity android:name=".AllPlantsActivity" />
+        <activity android:name=".UpdatePlantActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".DeviceListActivity" />
+        <activity android:name=".BluetoothActivity" />
+
+        <service android:name=".PushService" />
+
+        <activity android:name=".AllDetailsActivity"></activity>
+    </application>
+
+</manifest> <!-- //"BroadcastAtBootReceiver" --><!-- //"StartMyServiceAtBootReceiver"> -->
